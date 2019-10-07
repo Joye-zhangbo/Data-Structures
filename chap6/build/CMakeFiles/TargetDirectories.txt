@@ -1,0 +1,3 @@
+/home/zhangbo/Workspace/Data_Structures/chap6/build/CMakeFiles/edit_cache.dir
+/home/zhangbo/Workspace/Data_Structures/chap6/build/CMakeFiles/rebuild_cache.dir
+/home/zhangbo/Workspace/Data_Structures/chap6/build/CMakeFiles/chain_list.dir

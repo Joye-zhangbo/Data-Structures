@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/chain_list.h
+iostream
+-
+stdio.h
+-
+list
+-
+vector
+-
+ostream
+-
+sstream
+-
+iterator
+-
+algorithm
+-
+stdio.h
+-
+cstring
+-
+
+/home/zhangbo/Workspace/Data_Structures/chap6/src/chain_list.cpp
+../include/chain_list.h
+-
+boost/array.hpp
+/home/zhangbo/Workspace/Data_Structures/chap6/src/boost/array.hpp
+

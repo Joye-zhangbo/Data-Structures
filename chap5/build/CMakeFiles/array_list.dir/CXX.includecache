@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/array_list.h
+iostream
+-
+stdio.h
+-
+list
+-
+vector
+-
+ostream
+-
+sstream
+-
+iterator
+-
+algorithm
+-
+stdio.h
+-
+cstring
+-
+
+/home/zhangbo/Workspace/Data_Structures/chap5/src/array_list.cpp
+../include/array_list.h
+-
+boost/array.hpp
+/home/zhangbo/Workspace/Data_Structures/chap5/src/boost/array.hpp
+

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/array_list.dir/src/array_list.cpp.o  -o array_list -rdynamic -lm 
