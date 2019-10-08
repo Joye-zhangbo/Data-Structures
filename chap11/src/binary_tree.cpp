@@ -521,6 +521,7 @@ void BinaryTree<T>::printBinaryTree(BinaryTreeNode<T>* BT)
 int main(int argc, char** argv)
 {
   BinaryTree<char> binary_tree_('#');
+  std::cout << "Please input character: ";
   binary_tree_.createBinaryTreeByPreOrder();  // ABC#D##EF#G#HI###J###
   binary_tree_.printBinaryTree();
   std::cout << std::endl;
@@ -547,6 +548,14 @@ int main(int argc, char** argv)
   binary_tree_.destroy();
   // is empty
   std::cout << "Is the tree empty? ---> " << binary_tree_.empty() << std::endl;
+
+  int i = 0;
+  while (1)
+  {
+    std::cout << "loop count: " << i++ << std::endl;
+    if (i > 1000)
+      i = 0;
+  }
 
   return 0;
 }

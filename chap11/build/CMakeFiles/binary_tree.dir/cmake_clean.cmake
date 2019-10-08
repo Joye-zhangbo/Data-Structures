@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/binary_tree.dir/src/binary_tree.cpp.o"
-  "binary_tree.pdb"
   "binary_tree"
+  "binary_tree.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
