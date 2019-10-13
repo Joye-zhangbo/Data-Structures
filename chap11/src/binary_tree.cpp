@@ -549,6 +549,8 @@ int main(int argc, char** argv)
   // is empty
   std::cout << "Is the tree empty? ---> " << binary_tree_.empty() << std::endl;
 
+// #define DEBUG_ONLINE
+#ifdef DEBUG_ONLINE
   int i = 0;
   while (1)
   {
@@ -556,6 +558,7 @@ int main(int argc, char** argv)
     if (i > 1000)
       i = 0;
   }
+#endif  // DEBUG
 
   return 0;
 }

@@ -1,3 +1,4 @@
-/home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles/rebuild_cache.dir
 /home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles/edit_cache.dir
+/home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles/rebuild_cache.dir
+/home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles/binary_search_tree.dir
 /home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles/binary_tree.dir

@@ -63,9 +63,42 @@ CMAKE_BINARY_DIR = /home/zhangbo/Workspace/Data_Structures/chap11/build
 # Directory level rules for the build root directory
 
 # The main recursive "clean" target.
+clean: CMakeFiles/binary_search_tree.dir/clean
 clean: CMakeFiles/binary_tree.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/binary_search_tree.dir
+
+# All Build rule for target.
+CMakeFiles/binary_search_tree.dir/all:
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/depend
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles --progress-num=1,2 "Built target binary_search_tree"
+.PHONY : CMakeFiles/binary_search_tree.dir/all
+
+# Include target in all.
+all: CMakeFiles/binary_search_tree.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/binary_search_tree.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/binary_search_tree.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles 0
+.PHONY : CMakeFiles/binary_search_tree.dir/rule
+
+# Convenience name for target.
+binary_search_tree: CMakeFiles/binary_search_tree.dir/rule
+
+.PHONY : binary_search_tree
+
+# clean rule for target.
+CMakeFiles/binary_search_tree.dir/clean:
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/clean
+.PHONY : CMakeFiles/binary_search_tree.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/binary_tree.dir
@@ -74,7 +107,7 @@ clean: CMakeFiles/binary_tree.dir/clean
 CMakeFiles/binary_tree.dir/all:
 	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/depend
 	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles --progress-num=1,2 "Built target binary_tree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangbo/Workspace/Data_Structures/chap11/build/CMakeFiles --progress-num=3,4 "Built target binary_tree"
 .PHONY : CMakeFiles/binary_tree.dir/all
 
 # Include target in all.

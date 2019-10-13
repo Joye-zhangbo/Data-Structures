@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/zhangbo/Workspace/Data_Structures/chap11/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named binary_search_tree
+
+# Build rule for target.
+binary_search_tree: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 binary_search_tree
+.PHONY : binary_search_tree
+
+# fast build rule for target.
+binary_search_tree/fast:
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/build
+.PHONY : binary_search_tree/fast
+
+#=============================================================================
 # Target rules for targets named binary_tree
 
 # Build rule for target.
@@ -122,6 +135,33 @@ binary_tree: cmake_check_build_system
 binary_tree/fast:
 	$(MAKE) -f CMakeFiles/binary_tree.dir/build.make CMakeFiles/binary_tree.dir/build
 .PHONY : binary_tree/fast
+
+src/binary_search_tree.o: src/binary_search_tree.cpp.o
+
+.PHONY : src/binary_search_tree.o
+
+# target to build an object file
+src/binary_search_tree.cpp.o:
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/src/binary_search_tree.cpp.o
+.PHONY : src/binary_search_tree.cpp.o
+
+src/binary_search_tree.i: src/binary_search_tree.cpp.i
+
+.PHONY : src/binary_search_tree.i
+
+# target to preprocess a source file
+src/binary_search_tree.cpp.i:
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/src/binary_search_tree.cpp.i
+.PHONY : src/binary_search_tree.cpp.i
+
+src/binary_search_tree.s: src/binary_search_tree.cpp.s
+
+.PHONY : src/binary_search_tree.s
+
+# target to generate assembly for a file
+src/binary_search_tree.cpp.s:
+	$(MAKE) -f CMakeFiles/binary_search_tree.dir/build.make CMakeFiles/binary_search_tree.dir/src/binary_search_tree.cpp.s
+.PHONY : src/binary_search_tree.cpp.s
 
 src/binary_tree.o: src/binary_tree.cpp.o
 
@@ -156,9 +196,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... binary_search_tree"
 	@echo "... binary_tree"
+	@echo "... src/binary_search_tree.o"
+	@echo "... src/binary_search_tree.i"
+	@echo "... src/binary_search_tree.s"
 	@echo "... src/binary_tree.o"
 	@echo "... src/binary_tree.i"
 	@echo "... src/binary_tree.s"

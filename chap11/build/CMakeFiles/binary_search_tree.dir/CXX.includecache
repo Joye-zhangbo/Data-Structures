@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/binary_search_tree.h
+ostream
+-
+cstdio
+-
+
+/home/zhangbo/Workspace/Data_Structures/chap11/src/binary_search_tree.cpp
+../include/binary_search_tree.h
+-
+iostream
+-
+cstdio
+-
+algorithm
+-
+
